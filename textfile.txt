@@ -1,0 +1,14 @@
+#0:52:25 Factories & Seeders
+
+
+
+C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan db:seed --class=PostSeeder
+
+   INFO  Seeding database.
+
+
+
+
+C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan migrate
+
+   INFO  Running migrations.
