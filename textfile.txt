@@ -12,3 +12,19 @@ C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan db:seed --class=PostSe
 C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan migrate
 
    INFO  Running migrations.
+
+--------------------------------------------------------------------------------------------------------
+
+Date : 20-07-2025:
+
+1:05:13 Output Categories & Posts :
+
+--------------------------------------------------------------------------------------------------
+
+Date : 22-07-2025:
+
+1:27:09 Pagination :
+
+
+CMD : C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan vendor:publish --tag=laravel-pagination 
+Executes : Creates multiple bootstrap files in C:\Users\jamaludeen\Herd\laravel-medium-clone\resources\views\vendor\pagination\  path folder
