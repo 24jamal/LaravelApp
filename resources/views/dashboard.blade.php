@@ -5,7 +5,7 @@
             <div class="mt-8 text-gray-900">
                 <div class="p-4">
 
-                    @foreach ($posts as $post)
+                    @forelse ($posts as $post)
 
 
 
@@ -33,9 +33,10 @@
                             </div>
                         </div>
 
+                    @empty
+                    <div class="text-center text-gray-400 py-16">No Posts Found</div>
 
-
-                    @endforeach
+                    @endforelse
 
 
 

@@ -28,3 +28,14 @@ Date : 22-07-2025:
 
 CMD : C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan vendor:publish --tag=laravel-pagination 
 Executes : Creates multiple bootstrap files in C:\Users\jamaludeen\Herd\laravel-medium-clone\resources\views\vendor\pagination\  path folder
+
+---------------------------------------------------------------------------------------------------
+Date : 22-07-2025:
+
+1:33:19 Blade Directives:
+
+https://laravel.com/docs/12.x/blade --> Refer this for Blade Directives 
+
+In Project : I added forelse instaed of foreach
+Refer Code commits exact changes.
+----------------------------------------------------------------------------------------------------
