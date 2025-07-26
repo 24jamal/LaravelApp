@@ -39,3 +39,55 @@ https://laravel.com/docs/12.x/blade --> Refer this for Blade Directives
 In Project : I added forelse instaed of foreach
 Refer Code commits exact changes.
 ----------------------------------------------------------------------------------------------------
+Date : 22-07-2025:
+
+1:37:46 Components
+
+Commands executed::
+
+C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan make:component PostItem --view
+
+   INFO  View [C:\Users\jamaludeen\Herd\laravel-medium-clone\resources\views\components/post-item.blade.php] created successfully.  
+
+
+
+C:\Users\jamaludeen\Herd\laravel-medium-clone>php artisan migrate:fresh --seed
+
+  Dropping all tables ................................................................................................................. 16.80ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................. 8.79ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ................................................................................................ 34.58ms DONE
+  0001_01_01_000001_create_cache_table ................................................................................................. 6.43ms DONE
+  0001_01_01_000002_create_jobs_table ................................................................................................. 18.39ms DONE
+  2025_07_14_175449_create_categories_table ............................................................................................ 7.97ms DONE
+  2025_07_14_175513_create_posts_table ................................................................................................ 24.42ms DONE
+
+
+   INFO  Seeding database.  
+
+  Database\Seeders\PostSeeder .............................................................................................................. RUNNING  
+  Database\Seeders\PostSeeder ............................................................................................................ 0 ms DONE  
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Date : 26-07-2025
+
+In Laravel, a layout is a template file that defines the common structure of your web pages, such as the header, footer, navigation, and overall HTML structure.
+It allows you to reuse this common code across multiple views, so your application is DRY (Don't Repeat Yourself) and easier to maintain.
+
+Laravel uses the Blade templating engine, and layouts are typically created using Blade syntax.
+
+Why Use Layouts?
+
+* *Imagine you have 10 pages, and all of them share the same header and footer. Instead of copying the same code to every view, you can:
+
+* Put that code in a layout file.
+
+* Each individual view will just define its content section, and extend the layout.

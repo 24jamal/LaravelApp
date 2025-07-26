@@ -20,7 +20,7 @@ class PostController extends Controller
 
         // dump($categories);
 
-        return view('dashboard', ['categories' => $categories, 'posts'=> $posts]);
+        return view('post.index', ['categories' => $categories, 'posts'=> $posts]);
         
     }
 
