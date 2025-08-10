@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Database\Seeder;
 use App\Models\Post;
 use App\Models\User;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -16,25 +17,26 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test user',
-            'email' => 'test@example.com'
-        ]
+        User::factory()->create(
+            [
+                'name' => 'Test user',
+                'email' => 'test@example.com'
+            ]
 
         );
-        // $categories = [
-        //     'Technology',
-        //     'Health',
-        //     'Science',
-        //     'Sports',
-        //     'Politics',
-        //     'Entertainment'
+        $categories = [
+            'Technology',
+            'Health',
+            'Science',
+            'Sports',
+            'Politics',
+            'Entertainment'
 
-        // ];
+        ];
 
-        // foreach ($categories as $category) {
-        //     Category::create(['name'=> $category]);
-        // }
+        foreach ($categories as $category) {
+            Category::create(['name' => $category]);
+        }
 
         // Post::factory(100)->create();
 
