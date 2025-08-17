@@ -258,3 +258,36 @@ Generated from ChatGPT
    User submits form → validated by ProfileUpdateRequest → handled by ProfileController → User model updates database → view shows updated info
 
 --------------------------------------------------------------------------------------------
+
+
+Date : 16-08-2025
+3:21:41 Post Details Page
+Generated from ChatGPT
+
+Post Details Page Features
+
+Displaying Post Content: The page presents the full content of a single blog post, including the title, body, and publication date.
+
+Author Information: It shows details about the post's author, such as their name and profile picture, providing context to the reader.
+
+User Interactions:
+
+Like/Unlike Functionality: Users can like or unlike the post, with the interface updating accordingly.
+
+Follow/Unfollow Author: Readers have the option to follow or unfollow the author directly from the post page.
+
+Comment Section: The page includes a section where users can read and post comments, fostering engagement and discussion.
+
+Post Metadata:
+
+Tags: Relevant tags associated with the post are displayed, aiding in content categorization.
+
+Reading Time: An estimated reading time is shown, giving readers an idea of the post's length.
+
+Responsive Design: The page is designed to be mobile-friendly, ensuring a seamless experience across devices.
+
+This section of the tutorial demonstrates how to utilize Laravel's Blade templating engine,
+Eloquent ORM, and routing capabilities to create a dynamic and interactive post details page.
+By following this part of the course, you'll gain practical experience in building feature-rich pages that enhance user engagement.
+
+-----------------------------------------------------------------------------------------------------------------------------
