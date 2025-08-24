@@ -7,20 +7,15 @@
                 {{-- User Info --}}
                 <div class="flex items-center gap-4 mb-6">
                     {{-- Avatar --}}
-                    @if ($post->user->image)
-                        <img src="{{ $post->user->imageUrl() }}" alt="{{ $post->user->name }}"
-                            class="w-12 h-12 rounded-full">
-                    @else
-                        <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png" alt="Dummy Avatar"
-                            class="w-12 h-12 rounded-full">
-                    @endif
+                    <x-user-avatar :user="$post->user" />
 
 
                     {{-- Name and Follow --}}
                     <div class="flex flex-col">
 
                         <div class="flex items-center gap-2">
-                            <h3 class="font-medium">{{ $post->user->name }}</h3>
+                            <a href="{{ route('profile.show', $post->user) }}"
+                                class="hover-underline">{{ $post->user->name }}</a>
                             <a href="#" class="text-emerald-500 text-sm">Follow</a>
                         </div>
                         <div class="text-gray-500 text-sm flex gap-2">

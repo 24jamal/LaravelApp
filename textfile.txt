@@ -291,3 +291,38 @@ Eloquent ORM, and routing capabilities to create a dynamic and interactive post 
 By following this part of the course, you'll gain practical experience in building feature-rich pages that enhance user engagement.
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+Date : 24-08-2025
+3:52:05 User's Public Profile Page
+
+
+📌 What happens in this part
+1. Route & Controller Setup
+
+  * A new route is added to show a specific user’s profile page.
+  * A controller method fetches the user’s details (by username/ID) along with their posts.
+
+2. Blade Template (UI)
+
+  * A public profile page is built where visitors can see:
+
+    * User’s name, avatar, and bio (if available).
+    * List of all posts created by that user.
+    * Counts for followers, following, and posts.
+
+3. Follow/Unfollow Feature
+
+  * A button is displayed to follow/unfollow the user.
+  * Logic checks: If the logged-in user already follows, show Unfollow, otherwise Follow.
+  * Clicking the button triggers the respective controller method.
+
+4. Post Display on Profile
+
+  * User’s posts are listed with title, excerpt, and created date.
+  * Pagination is applied so the page doesn’t get overloaded.
+
+5. Final Outcome
+
+  * Anyone visiting `/@username` (or similar route) can see that user’s public profile page, their posts, and follow/unfollow them.
+
+------------------------------------------------------------------------------------------------------------------------
