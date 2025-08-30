@@ -28,7 +28,7 @@
                 </div>
 
 
-                <x-clap-button></x-clap-button>
+                <x-clap-button :post="$post"></x-clap-button>
 
                 {{-- Post Image --}}
                 @if ($post->imageUrl())
@@ -45,7 +45,7 @@
                 <div class="mt-8 ">
                     <span class="px-4 py-2 bg-gray-300 rounded-xl">{{ $post->category->name }}</span>
                 </div>
-                <x-clap-button></x-clap-button>
+                <x-clap-button :post="$post"></x-clap-button>
                 {{-- Clap Section (if needed) --}}
                 <div class="mt-6">
                     {{-- Add your clap/like buttons here --}}

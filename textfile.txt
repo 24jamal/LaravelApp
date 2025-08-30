@@ -377,3 +377,40 @@ Follow/Unfollow Functionality – General Notes
       Always validate relationships on the backend to prevent duplicates or invalid actions.
 
       Keep frontend lightweight and reactive using Alpine.js instead of heavy frameworks when only minor interactivity is needed.
+
+   -----------------------------------------------------------------------------------------------------------------------
+
+Date : 30-08-2025
+4:56:20 Implement Like/Unlike Post
+
+1. **Model Relationships**
+
+   * Define relationships in the model (e.g., Post → likes/dislikes).
+   * Add helper methods to check if a user has liked/disliked.
+
+2. **Routes & Controller**
+
+   * Create routes for like and dislike actions.
+   * Controller handles toggling actions and prevents both like and dislike at once.
+
+3. **Frontend Integration (Blade + Alpine.js)**
+
+   * Render Like/Dislike buttons with initial counts from Laravel.
+   * Use Alpine.js to manage state (liked, disliked, likeCount, dislikeCount).
+
+4. **AJAX Requests**
+
+   * Alpine.js sends requests to Laravel when buttons are clicked.
+   * Update UI optimistically while waiting for backend confirmation.
+
+5. **Laravel Response**
+
+   * Return JSON with updated counts and user’s action status.
+   * Alpine.js updates state accordingly.
+
+6. **UI Feedback**
+
+   * Highlight active buttons for current user’s choice.
+   * Instantly update counts without page reload.
+
+------------------------------------------------------------------------------------------------------------------------
