@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $categories = Category::get();
-        $posts = Post::orderBy('created_at', 'DESC')->simplePaginate(5);
+        $posts = Post::latest()->simplePaginate(5);
 
         // dump($categories);
 
@@ -89,5 +89,16 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+    }
+
+    public function category(Category $category)
+    {
+
+        $posts = $category->posts()->latest()->simplePaginate(5);
+        $categories = Category::all();
+        return view('post.index', [
+            'posts' => $posts,
+            'categories' => $categories,
+        ]);
     }
 }
