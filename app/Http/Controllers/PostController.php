@@ -16,6 +16,12 @@ class PostController extends Controller
      */
     public function index()
     {
+        $user = auth()->user();
+
+        if ($user) {
+            $ids = $user->following()->pluck('users.id');
+        }
+
         $categories = Category::get();
         $posts = Post::latest()->simplePaginate(5);
 

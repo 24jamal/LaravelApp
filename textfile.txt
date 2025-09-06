@@ -414,3 +414,48 @@ Date : 30-08-2025
    * Instantly update counts without page reload.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Date : 06-09-2025
+
+Summary of the "Show only posts from following users" segment (at 5:21:36)
+
+In this part of the “Learn Laravel by Building a Medium Clone” tutorial, you go through the implementation of filtering the feed to display posts only from users that the current user is following. Here’s how it's typically structured:
+
+1. Fetching Followed Users
+
+   First, the system retrieves the list of users whom the authenticated user has followed. This is usually done via a many-to-many relationship—for example, a followers() or following() relation defined in your User model.
+
+2. Querying Posts by Followed Users
+
+   Next, you build a query to fetch posts whose authors are in that list of followed users.
+
+   This might look something like:
+
+   $followedUserIds = auth()->user()->following()->pluck('id');
+   $posts = Post::whereIn('user_id', $followedUserIds)
+               ->latest()
+               ->get();
+
+3. Displaying the Filtered Feed
+
+   Finally, you pass that list of posts to your view (e.g., a Blade template) and loop through them to show only relevant content.
+
+
+Recap of the Course Structure
+
+   This tutorial is part of a step-by-step course that teaches you how to build a Medium-style platform with features like:
+
+   User authentication (registration, login, email verification)
+
+   Creating, editing, and deleting posts
+
+   Implementing categories and filters
+
+   Social features: follow/unfollow, like/unlike, and filtering posts by followers
+
+   Image upload and resizing
+
+   Pagination, Blade templating, and more
+
+---------------------------------------------------------------------------------------------------------------------------
+
