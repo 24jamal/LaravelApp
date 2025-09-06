@@ -1,7 +1,6 @@
 <div class="flex bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mb-8">
     <a href="#" class="w-43 h-43">
-        <img class="w-48 h-48 object-cover rounded-l-lg" src="{{ Storage::url($post->image) }}"
-            alt="{{ $post->title }}" />
+        <img class="w-48 h-48 object-cover rounded-l-lg" src="{{ $post->imageUrl() }}" alt="{{ $post->title }}" />
     </a>
     <div class="p-5">
         <a href="{{ route('post.show', ['username' => $post->user->username, 'post' => $post->slug]) }}">
