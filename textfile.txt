@@ -501,3 +501,44 @@ Spatie outlines a progression—from basic Laravel file uploads to a full-featur
 
 ------------------------------------------------------------------------------------------------------------------------
 
+Date : 07-09-2025
+5:57:14 Home Page Optimization
+
+What the instructor does / key goals
+
+   Make the homepage fast and show the right posts (published posts, optionally only posts from people the current user follows). 
+
+Concrete optimizations typically shown
+
+      Filter posts to only show published items (use a published_at field / scopePublished).
+
+      Order (e.g. orderBy('published_at', 'desc')) and paginate results to avoid loading everything at once.
+
+      Use eager loading (with('user','category')) to prevent N+1 queries when rendering post author/category.
+
+      Use withCount() (or loadCount) for likes/claps/comments so counts are retrieved in the same query.
+
+      Select only needed columns (select('id','title','excerpt',...)) rather than * for big joins.
+
+      Cache heavy queries or fragments (query caching, view fragment caching, or Redis) for the homepage.
+
+      Optimize images: generate/rescale thumbnails on upload and use lazy loading to reduce page weight.
+
+      Use view components/partials to keep blade templates efficient and avoid duplicated DB work in views.
+
+      Consider database indexes on frequently filtered/sorted columns (e.g. published_at, user_id) to speed queries.
+
+      Route/config caches and PHP/opcode caches for production deployment to improve overall response time. 
+      Medium
+
+Why each matters (brief)
+
+      Eager loading + withCount reduces number of DB queries (big win for list pages).
+
+      Pagination + selecting only necessary columns reduces memory and transfer size.
+
+      Image resizing + lazy load improves page speed and perceived performance.
+
+      Caching avoids repeated heavy queries on a high-traffic homepage.
+
+------------------------------------------------------------------------------------------------------------------------------------
