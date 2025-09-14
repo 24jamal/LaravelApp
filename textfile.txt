@@ -550,3 +550,10 @@ From my own words:
 
 Adding Editing and Deleting Posts on Application 
 ---------------------------------------------------------------------------------------------------------------
+Date : 14-09-2025
+6:43:26 Make image optional during Update
+
+Make the image optional for updates. 
+I created a separate PostUpdateRequest for the update (the PostCreateRequest is still used for creating). 
+Submitting the edit form without an image should update the other fields.
+------------------------------------------------------------------------------------------------------------------
