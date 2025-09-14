@@ -97,8 +97,17 @@ class User extends Authenticatable implements MustVerifyEmail, HasMedia
     {
         return $post->claps()->where('user_id', $this->id)->exists();
     }
-    public function imageUrl()
+    public function imageUrl($conversionName = null)
     {
-        return $this->getFirstMedia('avatar')?->getUrl('avatar');
+        $media = $this->getFirstMedia('avatars'); // returns a Media object
+
+        if ($media) {
+            if ($conversionName && $media->hasGeneratedConversion($conversionName)) {
+                return $media->getUrl($conversionName);
+            }
+            return $media->getUrl(); // original file
+        }
+
+        return null; // or fallback image
     }
 }

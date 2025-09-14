@@ -542,3 +542,11 @@ Why each matters (brief)
       Caching avoids repeated heavy queries on a high-traffic homepage.
 
 ------------------------------------------------------------------------------------------------------------------------------------
+
+Date : 14-09-2025
+6:11:38 Editing and Deleting Posts
+
+From my own words:
+
+Adding Editing and Deleting Posts on Application 
+---------------------------------------------------------------------------------------------------------------
