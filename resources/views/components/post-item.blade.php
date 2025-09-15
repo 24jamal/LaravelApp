@@ -21,8 +21,15 @@
         <!-- Date -->
         <div class="mt-3 flex items-center space-x-2 text-gray-400 text-sm">
             <!-- Date -->
+
             <span>
+                <a href="{{ route('profile.show', $post->user->username) }}" class="text-gray-600 hover:underline">
+                    {{ $post->user->username}}
+                </a>
+                at
                 {{ $post->created_at->format('M d, Y') }}
+
+
             </span>
 
             <!-- Clap Icon -->
